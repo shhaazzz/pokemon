@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-// import { List } from "../../app/../../packages/ui";
-// import { ListItem } from "../../app/../../packages/ui";
+import { List } from "../../app/../../packages/ui";
+import { ListItem } from "../../app/../../packages/ui";
 
 interface Pokemon {
   name: string;
@@ -31,6 +31,11 @@ const App: React.FC = () => {
   return (
     <>
       <h1>Pokemon list:</h1>
+      <List>
+        {pokemonList.map((pokemon) => (
+          <ListItem key={pokemon.name} name={pokemon.name} />
+        ))}
+      </List>
     </>
   );
 };
