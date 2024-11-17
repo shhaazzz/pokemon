@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "node", // Ensure this is set to "node"
+    "jsx": "react-jsx",
+    "strict": true,
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true, // Enable synthetic default imports
+    "lib": ["ES2020", "DOM", "DOM.Iterable"]
+  },
+  "include": ["src"]
+}
