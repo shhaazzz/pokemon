@@ -1,81 +1,90 @@
-# Turborepo starter
+# Code Challenge:
 
-This is an official starter Turborepo.
+## Introduction:
 
-## Using this example
+Welcome to the React Developer Technical Assessment! This test is designed to evaluate your proficiency in building React applications using a modern stack, including Redux Toolkit, Vite, React Router and TurboRepo. We have prepared a set of tasks and questions that cover a spectrum of skills, ranging from fundamental concepts to more advanced topics.
 
-Run the following command:
+### Tasks:
 
-```sh
-npx create-turbo@latest
-```
+Complete the provided tasks to demonstrate your ability to work with React, Redux Toolkit, Vite, and TurboRepo. Adjust the complexity based on your experience level.
 
-## What's inside?
+### Questions:
 
-This Turborepo includes the following packages/apps:
+Answer the questions to showcase your understanding of the underlying concepts and best practices associated with the technologies in use.
 
-### Apps and Packages
+### Time Limit:
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+This assessment is designed to take approximately 1 hour to complete. Please manage your time effectively.
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+### Setup the reporsitory:
 
-### Utilities
+Make sure you have pnpm installed<br>
+Install dependencies with `pnpm`<br>
+Run the project with `turbo run dev` or `pnpm run dev`
 
-This Turborepo has some additional tools already setup for you:
+### prerequisite:
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+Start the test by Forking this repository, and complete the following tasks:<br>
 
-### Build
+## Task 1:
 
-To build all apps and packages, run the following command:
+Assignment: Use the `api` found in `App.tsx` to make a request and fetch a list of all Pokémon.<br>
+Question 1: How did you manage to fetch the list and what tool did you use?<br>
+Question 2: What steps would you take to future improve this?<br>
 
-```
-cd my-turborepo
-pnpm build
-```
+commit the code as `task-1`<br>
 
-### Develop
+## Task 2:
 
-To develop all apps and packages, run the following command:
+Assignment: Parse the list to the `<List />` component and ajust the component to show a list of all pokémon names
+Feel free to create more components in the `/ui` package or in the app if needed
 
-```
-cd my-turborepo
-pnpm dev
-```
+commit the code as `task-2`<br>
 
-### Remote Caching
+## Task 3:
 
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+Assignment: Style the `<List />` component to display as a grid.
 
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
+commit the code as `task-3`<br>
 
-```
-cd my-turborepo
-npx turbo login
-```
+## Task 4:
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+Assignment: Introduce `redux-toolkit` and store the list of pokémon in the redux store.<br>
+Question 4: What makes the `createSlice` in redux-toolkit difference then A Reducer in redux?<br>
+Question 5: Describe the benefits of immutable code.<br>
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
+commit the code as `task-4`<br>
 
-```
-npx turbo link
-```
+## Task 5:
 
-## Useful Links
+Assignment: Create button for each pokémon where an Action will be dispatched to remove the pokémon from the store
+Question 6: How can you verify the action has been dispatched?
 
-Learn more about the power of Turborepo:
+## Task 6:
 
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+Question 7: explain the use of `useEffect` hook in React
+Question 8: What is A High Order Component?
+Question 9: What use cases would a HOC be usefull?
+Question 10: What does it indicate when a component is prefixed with `use` and `with`
+Question 11: What is a Generic type in typescript?
+Question 12: Whats the difference between a controlled and uncontrolled input in React?
+
+answer 7 - The useEffect hook is used in React to perform side effects in functional components. Side effects include tasks like fetching data, directly manipulating the DOM, subscribing to events, or logging.
+
+answer 8 - HOCs are useful when you need to reuse logic or enhance components without modifying their code.
+
+answer - 9 Authentication: Wrapping components to check if a user is authenticated.
+Theming: Injecting theme-related props into components.
+Logging: Adding analytics or debug logs.
+Permission Handling: Restricting access based on user roles.
+
+answer 10 - A component prefixed with use indicates that it is a custom hook in React. Custom hooks encapsulate reusable logic and can use other React hooks.
+
+answer 11 - A generic type in TypeScript allows components, functions, or classes to be flexible with data types. It makes code reusable for different data types while maintaining type safety.
+
+answer 12 - controlled input - The value of the input is controlled by React state.
+Updates happen via onChange handlers.
+
+Uncontrolled Input -
+The value of the input is controlled by the DOM.
+Access happens via refs.
