@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { List } from "../../app/../../packages/ui";
 import { ListItem } from "../../app/../../packages/ui";
 import { useDispatch, useSelector } from "react-redux";
-import { setPokemonList } from "./store/pokemonSlice";
+import { setPokemonList, removePokemon } from "./store/pokemonSlice";
 import { RootState } from "./store/index";
 
 interface Pokemon {
@@ -32,12 +32,22 @@ const App: React.FC = () => {
     fetchPokemonData();
   }, []);
 
+  const handleRemove = (pokemon: string) => {
+    dispatch(removePokemon(pokemon));
+  };
+
   return (
     <>
       <h1>Pokemon list:</h1>
       <List>
         {pokemonList.map((pokemon: any) => (
-          <ListItem key={pokemon.name} name={pokemon.name} />
+          <>
+            <ListItem
+              key={pokemon.name}
+              name={pokemon.name}
+              onRemove={() => handleRemove(pokemon.name)}
+            />
+          </>
         ))}
       </List>
     </>
